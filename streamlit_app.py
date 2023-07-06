@@ -15,6 +15,7 @@ conn_parameters = {
       "user": st.secrets["user"],
       "password": st.secrets["password"],
       "role": st.secrets["role"],
+      "database": st.secrets["role"],
       "warehouse": st.secrets["warehouse"],
    }
 
