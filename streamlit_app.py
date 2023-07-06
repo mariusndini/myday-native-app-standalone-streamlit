@@ -10,14 +10,13 @@ st.set_page_config(layout="centered")
 
 
 # CONNECT TO SNOWFLAKE  
-conn_parameters = {user : st.secrets["user"],
-                    password : st.secrets["password"],
-                    account : st.secrets["account"],
-                    role : st.secrets["role"],
-                    warehouse : st.secrets["warehouse"],
-                    session_parameters : {
-                        'QUERY_TAG': 'Streamlit',
-                    }
+conn_parameters = {
+      "account": st.secrets["account"],
+      "user": st.secrets["user"],
+      "password": st.secrets["password"],
+      "role": st.secrets["role"],
+      "warehouse": st.secrets["warehouse"],
+   }
 
 
 session = Session.builder.configs(conn_parameters).create()
