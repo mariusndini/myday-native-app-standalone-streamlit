@@ -46,7 +46,7 @@ def main_page():
                         FROM HK.POP_AGG 
                         WHERE ID ='{pin}' 
                         and DATE between '{start_date}' and '{end_date}' 
-                        order by DATE asc""")
+                        order by DATE asc""").to_pandas()
 
     st.write(agg)
 
