@@ -155,7 +155,7 @@ def main_page():
     })
 
 
-    MAX_CAL_CALC = max((agg['ACTIVE_ENERGY_BURNED'] + agg['BASAL_ENERGY_BURNED']).max(), agg['DIETARY_ENERGY'].max())/1000
+    MAX_CAL_CALC = int(max((agg['ACTIVE_ENERGY_BURNED'] + agg['BASAL_ENERGY_BURNED']).max(), (df_macros['Protein'] + df_macros['Carbs'] + df_macros['Fat']).max())/1000)
 
 
     # Transform the dataframe for chart
